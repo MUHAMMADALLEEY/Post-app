@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-zinc-900 text-white">
+
+    <div class="absolute top-0 left-0 p-8 w-full">
+
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-lg text-gray-300 mb-6">Edit the Post</p>
+
+            <form action="/update/<%= post._id %>" method="POST">
+                <textarea name="content" placeholder="Write your post here..." id="postContent"
+                    class="w-full h-48 p-4 bg-transparent border-2 border-zinc-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-600 resize-none mb-6"
+                    required><%= post.content %></textarea>
+            
+                <div class="flex justify-center">
+                    <button type="submit"
+                        class="bg-blue-600 text-white py-2 px-8 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        Update
+                    </button>
+                </div>
+            </form>
+            
+        </div>   
+    </div>
+
+</body>
+
+</html>
