@@ -9,7 +9,11 @@ mongoose.connect('mongodb://localhost:27017/mydb', { useNewUrlParser: true, useU
     password:String,
     posts:[{
         type:mongoose.Schema.Types.ObjectId,ref:"post",
-    }]
+    }],
+    profilepix:{
+      type:String,
+      default: 'file.png'
+    }
 })
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);

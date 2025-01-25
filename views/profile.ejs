@@ -13,7 +13,13 @@
     <div class="absolute top-0 left-0 p-8 w-full">
 
         <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-blue-500 mb-4">Hello, <%= user.name %></h2>
+            <div class="flex gap-2">
+<div class="w-10 h-10 rounded-md">
+    <img src="/images/upload/<%= user.profilepix %>" alt="Profile Picture" class="w-full h-full object-cover">
+</div>
+                <h2 class="text-3xl font-bold text-blue-500 mb-4">Hello, <%= user.name %></h2>
+
+            </div>
             <p class="text-lg text-gray-300 mb-6">You can create a new post here</p>
 
             <form action="/post" method="POST">
